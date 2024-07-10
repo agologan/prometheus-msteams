@@ -82,6 +82,7 @@ func (s simpleService) post(ctx context.Context, c card.Office365ConnectorCard, 
 		err = fmt.Errorf("failed to creating a request: %w", err)
 		return pr, err
 	}
+    req.Header.Set("Content-Type", "application/json")
 
 	resp, err := s.client.Do(req)
 	if err != nil {
