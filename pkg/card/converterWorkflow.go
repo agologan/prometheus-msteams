@@ -51,6 +51,7 @@ type AdaptiveCardItem struct {
 
 type WorkflowConnectorCard struct {
 	Type        string             `json:"type"`
+	Summary     string             `json:"summary,omitempty"`
 	Attachments []AdaptiveCardItem `json:"attachments"`
 }
 
